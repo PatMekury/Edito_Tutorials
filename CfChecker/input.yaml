@@ -1,0 +1,25 @@
+---
+#Define default options. Can be overidden by passing them through data
+options:
+    #Pass options to copernicusmarine python API here
+    copernicusmarine:
+        no_directories: True #keep this option as a minimum
+        overwrite: True
+    #Pass options to cfchecks here 
+    cfchecks: "-v 1.8"
+
+#Provide access to data
+# filename: name of the file in the data/ directory
+# dataset: name of origin dataset on MDS. NOTE: Forces retrieval of file from MDS.
+# cfchecks: use this to override the cfchecks options passed above for a specific file
+# copernicusmarine: use this to override the copernicusmarine options passed above for a specific file
+data:
+  - filename: "cmems_mod_glo_phy_anfc_0.083deg-climatology-uncertainty_P1M-m.nc"
+    cfchecks: "-v 1.8"
+    dataset: "cmems_mod_glo_phy_anfc_0.083deg-climatology-uncertainty_P1M-m"
+  - filename: "mercatorglorys12v1_gl12_mean_1993_2016_01.nc"
+    cfchecks: "-v 1.6"
+    dataset: "cmems_mod_glo_phy_my_0.083deg-climatology_P1M-m"
+  - filename: "WAVERYSv1_climatology_19930101_20211231.nc"
+    cfchecks: "-v 1.6"
+    dataset: "cmems_mod_glo_wav_my_0.2deg-climatology_P1M-m"

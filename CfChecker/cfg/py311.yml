@@ -1,0 +1,8 @@
+---
+channels:
+  - conda-forge
+dependencies:
+  - cfchecker
+  - copernicusmarine>=1.3.0
+  - pip
+  - mamba
